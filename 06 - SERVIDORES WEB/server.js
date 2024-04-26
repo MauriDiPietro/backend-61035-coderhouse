@@ -19,7 +19,7 @@ app.get('/products', (req, res)=>{
     // const value = req.query.value
     console.log(value);
     const productsFilter = products.filter(p => p.price > parseInt(value))
-    res.json(productsFilter)
+    res.status(201).json(productsFilter)
     //! PRECIO MAYOR A: _15_ |BUSCAR| --> GET localhost:8080/products?value=15
     
 })
@@ -30,7 +30,7 @@ app.get('/product/:id', (req, res)=>{
     // const { idCat } = req.params;
     console.log(id);
     const prod = products.find(p => p.id === parseInt(id))
-    if(!prod) res.json({msg: 'Product not found'})
+    if(!prod) res.status(404).json({msg: 'Product not found'})
     else res.json(prod)
 //! |coca-cola| ---> GET http://localhost:8080/product/3
 })
