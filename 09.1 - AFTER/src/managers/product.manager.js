@@ -21,6 +21,7 @@ export default class ProductManager {
     try {
       const product = {
         id: uuidv4(),
+        status: true,
         ...obj,
       };
       const products = await this.getProducts();
