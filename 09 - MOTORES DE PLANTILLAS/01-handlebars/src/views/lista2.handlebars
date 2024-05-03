@@ -1,0 +1,13 @@
+{{#if users.length}}
+    {{#each users}}
+        <ul>
+            <li>{{firstname}}</li>
+            <li>{{lastname}}</li>
+            <li>{{age}}</li>
+            <li>{{mail}}</li>
+            <li>{{phone}}</li>
+        </ul>
+    {{/each}}
+{{else}}
+    <p>No existen usuarios registrados</p>
+{{/if}}

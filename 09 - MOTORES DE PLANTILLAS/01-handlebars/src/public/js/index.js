@@ -1,0 +1,1 @@
+console.log('este script se ejecuta desde handlebars');
