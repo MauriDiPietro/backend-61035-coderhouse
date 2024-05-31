@@ -75,9 +75,9 @@ export const getByEmailUser = async (email) => {
   }
 };
 
-export const getAllUsers = async (page, limit, query, sort) => {
+export const getAllUsers = async (page, limit, first_name, sort) => {
   try {
-    return await userDao.getAllUsers(page, limit, query, sort);
+    return await userDao.getAllUsers(page, limit, first_name, sort);
   } catch (error) {
     throw new Error(error);
   }
