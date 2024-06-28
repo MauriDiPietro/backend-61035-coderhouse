@@ -14,19 +14,19 @@ export default class Router {
     //.get('/', [middleware, ..., controller])
 
     get(path, roles, ...cb){
-        this.router.get(path, this.generateResponse, this.managerRoles(roles), this.resolveCallbacks(cb))
+        this.router.get(path, this.managerRoles(roles), this.resolveCallbacks(cb))
     }
 
     post(path, roles, ...cb){
-        this.router.post(path, this.generateResponse, this.managerRoles(roles), this.resolveCallbacks(cb))
+        this.router.post(path, this.managerRoles(roles), this.resolveCallbacks(cb))
     }
 
     put(path, roles, ...cb){
-        this.router.put(path, this.generateResponse, this.managerRoles(roles), this.resolveCallbacks(cb))
+        this.router.put(path, this.managerRoles(roles), this.resolveCallbacks(cb))
     }
 
     delete(path, roles, ...cb){
-        this.router.delete(path, this.generateResponse, this.managerRoles(roles), this.resolveCallbacks(cb))
+        this.router.delete(path, this.managerRoles(roles), this.resolveCallbacks(cb))
     }
 
     resolveCallbacks(callbacks){
@@ -39,19 +39,13 @@ export default class Router {
         })
     }
 
-    generateResponse(req, res, next) {
-        res.success = (statusCode, data) => res.status(statusCode).json({ status: 'success', info: data });
-        res.failure = (statusCode, data) => res.status(statusCode).json({ status: 'failure', info: data });
-        next();
-    }
-
     managerRoles(roles){
         return async(req, res, next) => {
-            if(roles.includes('PUBLIC')) next();
+            if(roles.includes('PUBLIC')) return next();
             const authHeader = req.get('Authorization');
             if(!authHeader) return res.json({ msg: 'Unhatorized' });
             const user = await checkAuth(req, res, next);
-            if(roles.includes(user.role.toUpperCase())) next();
+            if(roles.includes(user.role.toUpperCase())) return next();
             else return res.json({ msg: 'Unhatorized' });
         }
     }
