@@ -35,8 +35,9 @@ export const checkAuth = async (req, res, next) => {
       res.set("Authorization", `Bearer ${newToken}`); // Agregar el nuevo token al encabezado
     }
     req.user = user;
-    next();
+    // next();
+    return user;
   } catch (error) {
-    res.status(403).json({ msg: "Unhautorized" });
+    next(error)
   }
 };

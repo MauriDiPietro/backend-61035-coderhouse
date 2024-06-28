@@ -64,7 +64,7 @@ export const login = async(req,res,next)=>{
   }
 }
 
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
   try {
     res.json(await services.register(req.body));
   } catch (error) {
