@@ -9,18 +9,18 @@ export default class UserController extends Controllers{
     super(userService)
   }
 
-  async register(req, res, next){
+  register = async(req, res, next) =>{
     try {
-      const data = await userService.register(req.body);
+      const data = await this.service.register(req.body);
       !data ? createResponse(res, 404, data) : createResponse(res, 200, data);
     } catch (error) {
       next(error);
     }
   };
 
-  async login(req, res, next){
+  login = async(req, res, next) =>{
     try {
-     const token = await userService.login(req.body);
+     const token = await this.service.login(req.body);
      res.header('Authorization', token);
      !token ? createResponse(res, 404, token) : createResponse(res, 200, token);
     } catch (error) {
@@ -28,7 +28,7 @@ export default class UserController extends Controllers{
     }
   };
 
-  profile(req, res, next){
+  profile =(req, res, next)=>{
     try {
      if(req.user){
       const { first_name, last_name, email, role } = req.user;
