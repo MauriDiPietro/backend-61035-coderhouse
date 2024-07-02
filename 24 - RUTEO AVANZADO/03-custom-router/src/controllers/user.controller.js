@@ -4,7 +4,7 @@ import * as services from "../services/user.services.js";
 export const login = async(req,res,next)=>{
   try {
     const user = await services.login(req.body);
-    if(!user) res.response(res, 'failure', 403, {msg: 'Invalid credentials'});
+    if(!user) res.status(403).json({msg: 'Invalid credentials'});
     const token = generateToken(user);
     res.header('Authorization', token).json({data: token})
   } catch (error) {
