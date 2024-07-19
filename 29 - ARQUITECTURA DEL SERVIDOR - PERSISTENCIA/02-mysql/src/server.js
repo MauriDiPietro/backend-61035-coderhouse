@@ -1,8 +1,7 @@
 import 'dotenv/config';
 import express, { json, urlencoded } from 'express';
-// import MainRouter from './routes/index.js';
 import db from './db/connection.js';
-// const mainRouter = new MainRouter();
+import prodRouter from './routes/product.router.js';
 
 const app = express();
 
@@ -11,7 +10,7 @@ db.sync({ force: false }).then(()=>console.log('Conectado a MySQL')).catch((erro
 app
     .use(json())
     .use(urlencoded({ extended: true }))
-    // .use('/api', mainRouter.getRouter())
+    .use('/api/products', prodRouter)
 
 const PORT = process.env.PORT || 8080;
 
