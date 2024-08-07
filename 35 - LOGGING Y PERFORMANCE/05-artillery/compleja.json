@@ -1,0 +1,55 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.0": 40,
+      "vusers.created": 40,
+      "http.requests": 40,
+      "errors.ETIMEDOUT": 40,
+      "vusers.failed": 40
+    },
+    "rates": {
+      "http.request_rate": 20
+    },
+    "firstCounterAt": 1722988723535,
+    "lastCounterAt": 1722988734551,
+    "firstMetricAt": 1722988723535,
+    "lastMetricAt": 1722988734551,
+    "period": 1722988730000,
+    "summaries": {},
+    "histograms": {}
+  },
+  "intermediate": [
+    {
+      "counters": {
+        "vusers.created_by_name.0": 40,
+        "vusers.created": 40,
+        "http.requests": 40
+      },
+      "rates": {
+        "http.request_rate": 40
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1722988723535,
+      "lastCounterAt": 1722988724510,
+      "firstMetricAt": 1722988723535,
+      "lastMetricAt": 1722988724510,
+      "period": "1722988720000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "errors.ETIMEDOUT": 40,
+        "vusers.failed": 40
+      },
+      "rates": {},
+      "firstCounterAt": 1722988733584,
+      "lastCounterAt": 1722988734551,
+      "firstMetricAt": 1722988733584,
+      "lastMetricAt": 1722988734551,
+      "period": "1722988730000",
+      "summaries": {},
+      "histograms": {}
+    }
+  ]
+}

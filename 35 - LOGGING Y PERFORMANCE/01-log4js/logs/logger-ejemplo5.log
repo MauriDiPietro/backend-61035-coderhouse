@@ -1,0 +1,3 @@
+[2024-08-06T19:52:29.081] [WARN] prod - imprimo un log de tipo warn
+[2024-08-06T19:52:29.085] [ERROR] prod - imprimo un log de tipo error
+[2024-08-06T19:52:29.086] [FATAL] prod - imprimo un log de tipo fatal

@@ -1,0 +1,3 @@
+[2024-08-06T19:39:22.127] [WARN] default - imprimo un log de tipo warn
+[2024-08-06T19:39:22.131] [ERROR] default - imprimo un log de tipo error
+[2024-08-06T19:39:22.132] [FATAL] default - imprimo un log de tipo fatal
