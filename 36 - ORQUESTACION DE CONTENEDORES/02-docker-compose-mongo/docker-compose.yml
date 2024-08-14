@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  mongo-docker-prueba-compose:
+    image: mongo
+    ports: 
+      - 27025:27017
+    volumes:
+      - '/d/DOCKER/MONGO/docker-61035:/data/db'

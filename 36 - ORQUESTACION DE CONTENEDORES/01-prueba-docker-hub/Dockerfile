@@ -1,8 +1,8 @@
-FROM 20.16.0-alpine
+FROM node:20.16.0-alpine
 WORKDIR /app
 COPY package*.json ./
 COPY . .
 COPY .env .env
 RUN npm install
 EXPOSE 8080
-CMD ["node", "./src/server.js"]
+CMD ["npm", "start"]

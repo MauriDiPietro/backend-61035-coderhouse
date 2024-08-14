@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  mongo_db:
+    container_name: mongo_docker_test
+    image: mongo:latest
+    ports:
+      - 27025:27017
+  
+  api:
+    container_name: api_docker_test
+    build: .
+    ports:
+      - 8085:8080
+    environment:
+      MONGO_URI: mongodb://mongo_db:27017/coder61035
+    
