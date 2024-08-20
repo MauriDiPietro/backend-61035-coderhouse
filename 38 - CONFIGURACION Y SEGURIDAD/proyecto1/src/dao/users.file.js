@@ -1,5 +1,3 @@
-//! NO SE UTILIZA Y NO HACE NADA 
-
 import fs from 'fs';
 import __dirname from '../utils.js';
 
