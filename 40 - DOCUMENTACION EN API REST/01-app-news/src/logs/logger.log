@@ -1,0 +1,28 @@
+[2024-08-22T20:13:49.589] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:13:51.646] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:18:22.608] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:18:24.705] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:19:01.599] [INFO] default - POST /news
+[2024-08-22T20:20:09.449] [INFO] default - GET /news
+[2024-08-22T20:34:42.022] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:34:44.091] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:36:40.185] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:36:42.284] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:37:38.331] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:37:40.228] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:40:50.663] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:40:52.696] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:41:21.345] [INFO] default - GET /news
+[2024-08-22T20:46:48.154] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:46:50.239] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:47:38.233] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:47:40.102] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:47:50.199] [INFO] default - GET /news
+[2024-08-22T20:48:14.349] [INFO] default - GET /news/64e3ba36b974d10ee720f25a
+[2024-08-22T20:50:20.923] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:50:22.976] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:50:40.292] [INFO] default - GET /news
+[2024-08-22T20:51:04.594] [INFO] default - PUT /news/652740c0b10ec04fe7d66a75
+[2024-08-22T20:52:10.510] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2024-08-22T20:52:12.451] [INFO] default - Conectado a MongoDB!
+[2024-08-22T20:52:14.978] [INFO] default - PUT /news/652740c0b10ec04fe7d66a75

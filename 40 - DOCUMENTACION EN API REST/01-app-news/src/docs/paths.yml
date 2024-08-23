@@ -1,0 +1,97 @@
+paths:
+  /news:
+    post:
+      tags:
+      - News
+      summary: Registro de noticia.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/News'
+        required: true
+      responses:
+        200:
+          description: Se registró la noticia correctamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/New'
+        500: 
+          description: Error del servidor.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/InternalServerError'
+    get:
+      tags:
+      - News
+      summary: Lista de noticias
+      responses:
+        200: 
+          description: Lista de noticias
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/GetAllNews'      
+        500: 
+          description: Error del servidor.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/InternalServerError'      
+  /news/{id}:
+    get:
+      tags:
+      - News
+      summary: Busca noticia por id.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id referente a la noticia
+          schema:
+            type: string
+      responses:
+        200:
+          description: noticia encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/New'
+        404:
+          description: noticia no se encuentra
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/ErrorGetById'
+    put:
+      tags:
+      - News
+      summary: Editar noticia.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id referente a la noticia
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/News'
+        required: true
+      responses:
+        200:
+          description: noticia encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/New'
+        404:
+          description: noticia no se encuentra
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/ErrorGetById'            

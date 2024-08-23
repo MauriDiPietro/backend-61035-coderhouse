@@ -1,0 +1,73 @@
+components:
+  schema:
+    News:
+      New:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id de la noticia.
+            # example:
+          title:
+            type: string
+            description: Titulo de la noticia.
+          body:
+            type: string
+            description: Cuerpo de la noticia.
+          author:
+            type: string
+            description: Autor de la noticia.
+          image:
+            type: string
+            description: URL de la imagen de la noticia.
+          date:
+            type: date
+            description: Fecha de publicación de la noticia.
+        example:
+          id: 76sd58d5f78sd6fsd6f8sdfsd7fsd8
+          title: ¡Argentina campeón del mundo!
+          body: Argentina se consagró campeon del mundo
+          author: Juan Gomez
+          image: http://sdfsdf.com/sdfd.jpg
+          date: 18/12/2022  
+      GetAllNews:
+        type: array
+        items:
+          properties:    
+            id:
+              type: string
+              description: Id de la noticia.
+            title:
+              type: string
+              description: Titulo de la noticia.
+            body:
+              type: string
+              description: Cuerpo de la noticia.
+            author:
+              type: string
+              description: Autor de la noticia.
+            image:
+              type: string
+              description: URL de la imagen de la noticia.
+            date:
+              type: string
+              format: date
+              description: Fecha de publicación de la noticia.
+      ErrorGetById:
+        type: object
+        properties:
+          msg:
+            type: string
+            description: No se encontró el id en la base de datos   
+        example:
+          msg: No se encontró el id 7s89d7f9sd8fds9 en la base de datos     
+      DeleteById:
+        type: string
+        description: noticia eliminada
+      InternalServerError:
+        type: object
+        properties:
+          msg:
+            type: string
+            description: Error del servidor  
+

@@ -1,0 +1,27 @@
+components:
+  parameters:
+    schemas:
+      News:
+        type: object
+        required:
+          - title
+          - body
+          - author
+          - image
+        properties:
+          title:
+            type: string
+            description: Titulo de la noticia
+            example: ¡Argentina campeón del mundo!
+          body:
+            type: string
+            description: Cuerpo de la noticia.
+            example: dasdmsamdas asd asdasdasd
+          author:
+            type: string
+            description: Nombre del autor de la noticia.
+            example: Juan Perez
+          image:
+            type: string
+            description: Url de la imagen.
+            example: http://sdfsdf.com/asdsad.jpg
